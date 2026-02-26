@@ -1,0 +1,78 @@
+[
+    {
+        "scenario": "High ICP — Alex Rivera, Head of Growth at Rippling",
+        "expected_output": {
+            "name": "Alex Rivera",
+            "title": "Head of Growth",
+            "company": "Rippling",
+            "company_size": "1000-5000",
+            "industry": "B2B SaaS / HR Tech",
+            "icp_score": 85,
+            "icp_reasoning": "Decision-maker role (Head of Growth), B2B SaaS company, 1000+ employees, strong growth signals with recent fundraising and product expansion",
+            "email": "alex.rivera@rippling.com",
+            "phone": "+1-xxx-xxx-xxxx",
+            "research_summary": "Rippling is a fast-growing workforce management platform that recently raised $200M+ in Series E. The company is actively expanding its sales and marketing teams, with strong GTM signals.",
+            "personalization_hooks": [
+                "Rippling's recent Series E funding round",
+                "Expansion into international markets",
+                "New product launches in IT management"
+            ],
+            "recommended_action": "LinkedIn invite + personalized email referencing growth momentum and GTM expansion",
+            "tools_used": [
+                "linkup_search (standard)",
+                "linkup_search (deep)",
+                "enrich_contact"
+            ],
+            "enrichment_triggered": true,
+            "credits_used": 1
+        }
+    },
+    {
+        "scenario": "Medium ICP — Marie Dupont, Marketing Director at Pennylane",
+        "expected_output": {
+            "name": "Marie Dupont",
+            "title": "Marketing Director",
+            "company": "Pennylane",
+            "company_size": "200-500",
+            "industry": "B2B SaaS / FinTech",
+            "icp_score": 68,
+            "icp_reasoning": "Marketing Director is a decision-maker role, Pennylane is B2B SaaS in FinTech, 200-500 employees, some growth signals but smaller scale",
+            "email": "m.dupont@pennylane.com",
+            "phone": null,
+            "research_summary": "Pennylane is a French B2B accounting and financial management SaaS platform for SMBs. Growing presence in the European market.",
+            "personalization_hooks": [
+                "Pennylane's growth in the French SaaS market",
+                "Recent product updates for accountants"
+            ],
+            "recommended_action": "Personalized email referencing FinTech growth in France",
+            "tools_used": [
+                "linkup_search (standard)",
+                "enrich_contact"
+            ],
+            "enrichment_triggered": true,
+            "credits_used": 1
+        }
+    },
+    {
+        "scenario": "Low ICP — David Martin, Freelance Consultant (Self-employed)",
+        "expected_output": {
+            "name": "David Martin",
+            "title": "Freelance Consultant",
+            "company": "Self-employed",
+            "company_size": null,
+            "industry": null,
+            "icp_score": 15,
+            "icp_reasoning": "Freelancer, no company affiliation, outside B2B SaaS ICP, not a decision-maker at a target company",
+            "email": null,
+            "phone": null,
+            "research_summary": "David Martin appears to be an independent freelance consultant with no company affiliation matching the target ICP.",
+            "personalization_hooks": [],
+            "recommended_action": "Skip — not a qualified prospect",
+            "tools_used": [
+                "linkup_search (standard)"
+            ],
+            "enrichment_triggered": false,
+            "credits_used": 0
+        }
+    }
+]

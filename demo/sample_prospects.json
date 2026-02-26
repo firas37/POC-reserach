@@ -1,0 +1,37 @@
+[
+    {
+        "id": "high-icp",
+        "label": "High ICP — Full Enrichment",
+        "prospect": {
+            "first_name": "Alex",
+            "last_name": "Rivera",
+            "title": "Head of Growth",
+            "company": "Rippling",
+            "domain": "rippling.com"
+        },
+        "expected_behavior": "ICP score ~85, deep search triggered, enrichment triggered, 3 personalization hooks returned"
+    },
+    {
+        "id": "medium-icp",
+        "label": "Medium ICP — Enrichment Triggered",
+        "prospect": {
+            "first_name": "Marie",
+            "last_name": "Dupont",
+            "title": "Marketing Director",
+            "company": "Pennylane",
+            "domain": "pennylane.com"
+        },
+        "expected_behavior": "ICP score ~68, standard search only, enrichment triggered (score > 60), email found"
+    },
+    {
+        "id": "low-icp",
+        "label": "Low ICP — No Enrichment (Credit Saved)",
+        "prospect": {
+            "first_name": "David",
+            "last_name": "Martin",
+            "title": "Freelance Consultant",
+            "company": "Self-employed"
+        },
+        "expected_behavior": "ICP score ~15, only 1 standard search call, no enrichment, credits saved"
+    }
+]
