@@ -1,0 +1,796 @@
+2026-02-28 04:57:53,282 - mcp_use.telemetry.telemetry - INFO - Anonymized telemetry enabled. Set MCP_USE_ANONYMIZED_TELEMETRY=false to disable.
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2502' in position 62: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 132, in run_research_agent
+    logger.info(
+Message: 'Starting research for Alex Rivera at Rippling'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2502' in position 62: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 180, in run_research_agent
+    logger.info("Agent loop starting...")
+Message: 'Agent loop starting...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f680' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 182, in initialize
+    logger.info("\U0001f680 Initializing MCP agent and connecting to services...")
+Message: '\U0001f680 Initializing MCP agent and connecting to services...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50c' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 200, in initialize
+    logger.info(f"\U0001f50c Found {len(self._sessions)} existing sessions")
+Message: '\U0001f50c Found 0 existing sessions'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f504' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 204, in initialize
+    logger.info("\U0001f504 No active sessions found, creating new ones...")
+Message: '\U0001f504 No active sessions found, creating new ones...'
+Arguments: ()
+[02/28/26 04:57:59] INFO     Processing request of type           server.py:720
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:720
+                             ListResourcesRequest                              
+                    INFO     Processing request of type           server.py:720
+                             ListPromptsRequest                                
+
+
++-----------------------------------------------------------------------------+
+|                                                                             |
+|                                                                             |
+|                        \u2584\u2580\u2580 \u2584\u2580\u2588 \u2588\u2580\u2580 \u2580\u2588\u2580 \u2588\u2580\u2584\u2580\u2588 \u2588\u2580\u2580 \u2588\u2580\u2588                        |
+|                        \u2588\u2580  \u2588\u2580\u2588 \u2584\u2584\u2588  \u2588  \u2588 \u2580 \u2588 \u2588\u2584\u2584 \u2588\u2580\u2580                        |
+|                                                                             |
+|                                                                             |
+|                                FastMCP 3.0.2                                |
+|                            https://gofastmcp.com                            |
+|                                                                             |
+|                  \U0001f5a5  Server:      fullenrich-server, 3.0.2                   |
+|                  \U0001f680 Deploy free: https://fastmcp.cloud                      |
+|                                                                             |
++-----------------------------------------------------------------------------+
+
+
+[02/28/26 04:58:03] INFO     Starting MCP server               transport.py:183
+                             'fullenrich-server' with                          
+                             transport 'stdio'                                 
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 207, in initialize
+    logger.info(f"\u2705 Created {len(self._sessions)} new sessions")
+Message: '\u2705 Created 2 new sessions'
+Arguments: ()
+[02/28/26 04:58:03] INFO     Processing request of type           server.py:720
+                             ListToolsRequest                                  
+                    INFO     Processing request of type           server.py:720
+                             ListResourcesRequest                              
+                    INFO     Processing request of type           server.py:720
+                             ListPromptsRequest                                
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 43-44: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 212, in initialize
+    logger.info(
+Message: '\U0001f6e0\ufe0f Created 3 LangChain tools from client: 3 tools, 0 resources, 0 prompts'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f9f0' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 241, in initialize
+    logger.info(f"\U0001f9f0 Found {len(all_tools)} tools across all connectors")
+Message: '\U0001f9f0 Found 3 tools across all connectors'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f9e0' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 247, in initialize
+    self._agent_executor = self._create_agent()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 359, in _create_agent
+    logger.info(f"\U0001f9e0 Agent ready with tools: {', '.join(tool_names)}")
+Message: '\U0001f9e0 Agent ready with tools: linkup_search, enrich_contact, check_credits'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2728' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 698, in stream
+    await self.initialize()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 249, in initialize
+    logger.info("\u2728 Agent initialization complete")
+Message: '\u2728 Agent initialization complete'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ac' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 735, in stream
+    logger.info(f"\U0001f4ac Received query: '{display_query}'")
+Message: "\U0001f4ac Received query: ' Research and qualify this prospect: Name: Alex Ri...'"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f3c1' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 736, in stream
+    logger.info("\U0001f3c1 Starting agent execution")
+Message: '\U0001f3c1 Starting agent execution'
+Arguments: ()
+[02/28/26 04:58:05] INFO     Processing request of type           server.py:720
+                             CallToolRequest                                   
+[02/28/26 04:58:07] INFO     HTTP Request: POST                 _client.py:1740
+                             https://api.linkup.so/v1/search                   
+                             "HTTP/1.1 200 OK"                                 
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f527' in position 58: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 821, in stream
+    log_agent_step(item, pretty_print=self.pretty_print)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 356, in log_agent_step
+    _log_step(item)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 340, in _log_step
+    logger.info(f"\U0001f527 Tool call: {tool_name} with input: {tool_input_str}")
+Message: "\U0001f527 Tool call: linkup_search with input: {'query': 'Alex Rivera Head of Growth site:rippling.com', 'depth': 'standard'}"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c4' in position 58: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 821, in stream
+    log_agent_step(item, pretty_print=self.pretty_print)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 356, in log_agent_step
+    _log_step(item)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 346, in _log_step
+    logger.info(f"\U0001f4c4 Tool result: {observation_str}")
+Message: "\U0001f4c4 Tool result: [TextContent(type='text', text='- Meet the Ripplers: Alex\\\\n  \\\\n  URL: https://www.rippling.com/..."
+Arguments: ()
+[02/28/26 04:58:09] INFO     Processing request of type           server.py:720
+                             CallToolRequest                                   
+[02/28/26 04:58:11] INFO     HTTP Request: POST                 _client.py:1740
+                             https://api.linkup.so/v1/search                   
+                             "HTTP/1.1 200 OK"                                 
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f527' in position 58: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 821, in stream
+    log_agent_step(item, pretty_print=self.pretty_print)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 356, in log_agent_step
+    _log_step(item)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 340, in _log_step
+    logger.info(f"\U0001f527 Tool call: {tool_name} with input: {tool_input_str}")
+Message: "\U0001f527 Tool call: linkup_search with input: {'query': 'Rippling company profile', 'depth': 'standard'}"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c4' in position 58: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 821, in stream
+    log_agent_step(item, pretty_print=self.pretty_print)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 356, in log_agent_step
+    _log_step(item)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\display.py", line 346, in _log_step
+    logger.info(f"\U0001f4c4 Tool result: {observation_str}")
+Message: "\U0001f4c4 Tool result: [TextContent(type='text', text='- Rippling - Crunchbase Company Profile & Funding\\\\n  \\\\n  URL: h..."
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 858, in stream
+    logger.info("\u2705 Agent finished with output")
+Message: '\u2705 Agent finished with output'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f389' in position 43: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 185, in run_research_agent
+    result = await agent.run(user_message)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 550, in run
+    result, steps_taken = await self._consume_and_return(generator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 479, in _consume_and_return
+    async for item in generator:
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\site-packages\mcp_use\agents\mcpagent.py", line 914, in stream
+    logger.info(f"\U0001f389 Agent execution complete in {time.time() - start_time:.2f} seconds")
+Message: '\U0001f389 Agent execution complete in 18.63 seconds'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2502' in position 62: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 186, in run_research_agent
+    logger.info("Agent loop completed.")
+Message: 'Agent loop completed.'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2502' in position 62: character maps to <undefined>
+Call stack:
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 31, in <module>
+    asyncio.run(main())
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 673, in run_until_complete
+    self.run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 640, in run_forever
+    self._run_once()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1992, in _run_once
+    handle._run()
+  File "C:\Users\firas\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\test_agent.py", line 26, in main
+    res = await run_research_agent(test_prospect)
+  File "C:\Users\firas\OneDrive\Bureau\Zyga\zyga-research-poc\backend\agent\researcher.py", line 190, in run_research_agent
+    logger.info(f"ICP score: {parsed.get('icp_score', 'N/A')} ù {parsed.get('name')}")
+Message: 'ICP score: 80 ù Alex Rivera'
+Arguments: ()
+STARTING TEST
+FINAL RESULT: {'name': 'Alex Rivera', 'title': 'Head of Growth', 'company': 'Rippling', 'company_size': '501-2000', 'industry': 'B2B SaaS', 'icp_score': 80, 'icp_reasoning': '+30 B2B SaaS, +10 501-2000 employees, +25 Head of Growth role, +15 active hiring signals = 80', 'email': '', 'phone': '', 'research_summary': 'Rippling is a B2B SaaS company that provides an all-in-one HR, IT, and finance platform designed to help companies manage employee data and benefits. Alex Rivera, as Head of Growth, is positioned in a leadership role that focuses on driving growth, which is critical in a fast-growing technology company. The company is currently expanding, indicated by their active job openings.', 'personalization_hooks': ["Alex's journey in building the product overlay team at Rippling", "Rippling's focus on shaping the future together with their 2025 Partner Advisory Board", 'Current open positions indicating rapid growth and expansion'], 'recommended_action': 'Engage with Alex to discuss growth strategies and potential collaboration opportunities with Rippling.', 'tools_used': ['linkup_search'], 'enrichment_triggered': False, 'credits_used': 0}
