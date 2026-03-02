@@ -3,6 +3,7 @@ Zyga Research & Enrichment Agent — Main Agent Logic
 Uses mcp-use to bridge the LLM (via GitHub Models) with MCP servers (Linkup + FullEnrich).
 """
 
+import asyncio
 import json
 import re
 import sys
@@ -92,7 +93,7 @@ def _validate_and_coerce(data: dict, prospect: dict) -> dict:
     data.setdefault("title", prospect.get("title", ""))
 
     # Coerce null → empty string for string fields
-    for field in ("email", "phone", "research_summary", "company_size", "industry",
+    for field in ("research_summary", "company_size", "industry",
                   "icp_reasoning", "recommended_action"):
         if data.get(field) is None:
             data[field] = ""
@@ -114,6 +115,7 @@ def _fallback_output(prospect: dict, reason: str) -> dict:
         title=prospect.get("title", ""),
         icp_score=0,
         icp_reasoning=f"Agent error: {reason}",
+        research_summary=f"Research could not be completed: {reason}",
         recommended_action="Check API keys and retry.",
     ).model_dump()
 
@@ -142,17 +144,14 @@ async def run_research_agent(prospect: dict) -> dict:
 
     # ── Configure LLM (via GitHub Models) ───────────────────
     llm = ChatOpenAI(
-        base_url=settings.GITHUB_MODELS_ENDPOINT,
-        api_key=settings.GITHUB_TOKEN,
         model=settings.GPT5_MODEL_NAME,
+        temperature=0.0,
+        api_key=settings.GITHUB_TOKEN,
+        base_url=settings.GITHUB_MODELS_ENDPOINT
     )
 
     # ── Create MCP Agent ─────────────────────────────────────
-    # IMPORTANT: recursion_limit = max_steps * 2 (set by mcp-use internals).
-    # LangGraph counts every graph node (agent + tool), not just tool calls.
-    # With 3-4 tool calls the graph traverses ~8-10 nodes, so recursion_limit
-    # must be > 10. Setting max_steps=15 gives recursion_limit=30, well above
-    # LangGraph's default 20 cap, while the prompt still enforces <=4 tool calls.
+    # agent researches (capped at 3 queries), needs enough steps for tool calls + responses
     agent = MCPAgent(
         llm=llm,
         client=client,
@@ -182,13 +181,17 @@ Enrich contact data only if ICP score >= {settings.ICP_MIN_SCORE_FOR_ENRICHMENT}
         # The mcp-use library's structured output validation is overly strict and
         # crashes when optional fields (email, phone) are returned as null.
         # We use our own robust _parse_agent_output() instead.
-        result = await agent.run(user_message)
+        result = await asyncio.wait_for(agent.run(user_message), timeout=120)
         logger.info("Agent loop completed.")
 
         # ── Parse output ─────────────────────────────────────
         parsed = _parse_agent_output(result, prospect)
         logger.info(f"ICP score: {parsed.get('icp_score', 'N/A')} — {parsed.get('name')}")
         return parsed
+
+    except asyncio.TimeoutError:
+        logger.error("Agent execution timed out after 120 seconds")
+        return _fallback_output(prospect, "Agent timed out after 120 seconds")
 
     except Exception as e:
         logger.error(f"Agent execution failed: {e}")

@@ -1,0 +1,40 @@
+Starting job...
+Polling job 32a9391d-5994-4e5e-beaa-90dbe32458cb...
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: IN_PROGRESS
+Status: FINISHED
+Job Finished! Data:
+{
+  "id": "32a9391d-5994-4e5e-beaa-90dbe32458cb",
+  "name": "zyga-test-final",
+  "status": "FINISHED",
+  "cost": {
+    "credits": 0
+  },
+  "data": [
+    {
+      "input": {
+        "first_name": "Alex",
+        "last_name": "Rivera",
+        "full_name": "Alex Rivera",
+        "company_domain": "rippling.com"
+      },
+      "contact_info": {}
+    }
+  ]
+}

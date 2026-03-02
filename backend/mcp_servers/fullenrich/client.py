@@ -46,7 +46,10 @@ class FullEnrichClient:
         if linkedin_url:
             contact["linkedin_url"] = linkedin_url
 
-        payload = {"contacts": [contact]}
+        payload = {
+            "name": f"zyga-{first_name}-{last_name}",
+            "contacts": [contact],
+        }
 
         async with httpx.AsyncClient(timeout=30.0) as client:
             # Start enrichment job

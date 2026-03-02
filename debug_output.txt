@@ -1,0 +1,16 @@
+Testing enrich_fields (snake_case)...
+Status: 400
+Response: {"code":"error.enrichment.enrich_fields.empty","message":"EnrichFields cannot be empty"}
+
+Testing EnrichFields (PascalCase)...
+Status: 400
+Response: {"code":"error.enrichment.enrich_fields.empty","message":"EnrichFields cannot be empty"}
+
+Testing enrichFields inside contact object...
+Status: 400
+Response: {"code":"error.enrichment.enrich_fields.empty","message":"EnrichFields cannot be empty"}
+
+Testing enrich_fields inside contact object...
+Status: 400
+Response: {"code":"error.enrichment.enrich_field.value","message":"EnrichField 'work_email' not valid must be contact.emails, contact.personal_emails or contact.phones"}
+

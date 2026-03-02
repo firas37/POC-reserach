@@ -154,9 +154,6 @@ function renderResult(result) {
 
     const contactHTML = buildContactHTML(result);
     const hooksHTML = buildHooksHTML(result.personalization_hooks);
-    const enrichmentTag = result.enrichment_triggered
-        ? `<span class="enrichment-tag enriched">✓ Enriched</span>`
-        : `<span class="enrichment-tag not-enriched">— Not Enriched</span>`;
 
     resultCard.innerHTML = `
         <!-- Header -->
@@ -197,15 +194,14 @@ function renderResult(result) {
                 <div class="result-field-value">${hooksHTML || "—"}</div>
             </div>
             <div class="result-field full-width">
-                <span class="result-field-label">Contact Data ${enrichmentTag}</span>
-                <div class="result-field-value">${contactHTML}</div>
+                <span class="result-field-label">Contact Data</span>
+                <div class="result-field-value" id="contactDataContainer">${contactHTML}</div>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="result-footer">
             <span class="result-action">💡 ${esc(result.recommended_action || "No action recommended")}</span>
-            <span class="result-credits">${result.credits_used} credit${result.credits_used !== 1 ? "s" : ""} used</span>
         </div>
     `;
 
@@ -213,29 +209,106 @@ function renderResult(result) {
 }
 
 function buildContactHTML(result) {
-    if (!result.email && !result.phone) {
-        return `<span style="color: var(--text-muted);">No contact data — enrichment was not triggered</span>`;
-    }
+    if (result.icp_score >= 60) {
+        // Store data on the button using data attributes for safe event handling
+        const btn = document.createElement("button");
+        btn.className = "enrich-btn";
+        btn.innerHTML = `
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            Enrich Contact (1 Credit)
+        `;
+        // We return the HTML string, but set up the listener after render
+        const name = result.name || "";
+        const domain = document.getElementById("domain").value || "";
+        const linkedin = document.getElementById("linkedinUrl").value || "";
 
-    let html = `<div class="contact-row">`;
-    if (result.email) {
-        html += `<div class="contact-item">
+        // Use a global callback to wire up after innerHTML is set
+        window._pendingEnrich = { name, domain, linkedin };
+
+        return `<button class="enrich-btn" id="enrichBtn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/>
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
             </svg>
-            ${esc(result.email)}
-        </div>`;
+            Enrich Contact (1 Credit)
+        </button>`;
+    } else {
+        return `<span style="color: var(--text-muted);">Score too low for enrichment (< 60)</span>`;
     }
-    if (result.phone) {
-        html += `<div class="contact-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            ${esc(result.phone)}
-        </div>`;
+}
+
+// Wire up enrich button after result is rendered
+const resultsObserver = new MutationObserver(() => {
+    const enrichBtn = document.getElementById("enrichBtn");
+    if (enrichBtn && window._pendingEnrich) {
+        const { name, domain, linkedin } = window._pendingEnrich;
+        enrichBtn.addEventListener("click", () => {
+            handleEnrich(name, domain, linkedin);
+        });
+        window._pendingEnrich = null;
     }
-    html += `</div>`;
-    return html;
+});
+resultsObserver.observe(document.getElementById("resultCard"), { childList: true, subtree: true });
+
+async function handleEnrich(fullName, domain, linkedinUrl) {
+    const container = document.getElementById("contactDataContainer");
+    container.innerHTML = `<span style="color: var(--text-muted);">
+        <div class="loading-spinner" style="width:20px;height:20px;border-width:2px;display:inline-block;vertical-align:middle;margin-right:8px;"></div>
+        Enriching via FullEnrich waterfall (15+ vendors)...
+    </span>`;
+
+    // Split full name back into first/last for the API
+    const parts = fullName.split(" ");
+    const firstName = parts[0] || "";
+    const lastName = parts.slice(1).join(" ") || "";
+
+    try {
+        const response = await fetch("/api/enrich", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                first_name: firstName,
+                last_name: lastName,
+                domain: domain || "",
+                linkedin_url: linkedinUrl || null
+            }),
+        });
+
+        if (!response.ok) {
+            const err = await response.json().catch(() => ({ detail: "Unknown error" }));
+            throw new Error(err.detail || `HTTP ${response.status}`);
+        }
+
+        const enrichResult = await response.json();
+
+        let html = `<div class="contact-row">`;
+        if (enrichResult.email) {
+            html += `<div class="contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/>
+                </svg>
+                ${esc(enrichResult.email)}
+            </div>`;
+        }
+        if (enrichResult.phone) {
+            html += `<div class="contact-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                ${esc(enrichResult.phone)}
+            </div>`;
+        }
+        if (!enrichResult.email && !enrichResult.phone) {
+            html += `<span style="color: var(--text-muted);">No contact data found</span>`;
+        }
+        html += `</div>`;
+
+        container.innerHTML = html;
+
+    } catch (error) {
+        container.innerHTML = `<span style="color: var(--red);">Enrichment Failed: ${esc(error.message)}</span>`;
+    }
 }
 
 function buildHooksHTML(hooks) {
@@ -269,25 +342,13 @@ function renderAgentTrace(result) {
 
     // Summary
     html += `
-        <div class="trace-summary">
-            <div class="trace-summary-label">Summary</div>
-            <div class="trace-summary-row">
-                <span>Total tool calls</span>
-                <span>${tools.length}</span>
-            </div>
-            <div class="trace-summary-row">
-                <span>ICP Score</span>
-                <span>${result.icp_score}/100</span>
-            </div>
-            <div class="trace-summary-row">
-                <span>Enrichment</span>
-                <span>${result.enrichment_triggered ? "✓ Triggered" : "✗ Skipped"}</span>
-            </div>
-            <div class="trace-summary-row">
-                <span>Credits used</span>
-                <span>${result.credits_used}</span>
-            </div>
-        </div>`;
+            <div class="trace-summary">
+                <div class="trace-summary-label">Summary</div>
+                <div class="trace-summary-row">
+                    <span>Total tool calls</span>
+                    <span>${tools.length}</span>
+                </div>
+            </div>`;
 
     traceContent.innerHTML = html;
 
@@ -312,7 +373,7 @@ function getToolDescription(tool) {
 
 // ── Error Handling ──────────────────────────
 function showError(message) {
-    errorCard.innerHTML = `<strong>Research Failed</strong>${esc(message)}`;
+    errorCard.innerHTML = `<strong>Research Failed</strong> ${esc(message)}`;
     errorSection.style.display = "block";
 }
 

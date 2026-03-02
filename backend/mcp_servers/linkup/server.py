@@ -46,8 +46,8 @@ async def linkup_search(
             
             # Format results into a readable string
             if "results" in data:
-                formatted = [f"- {r.get('name', '')}\\n  {r.get('snippet', '')}\\n  URL: {r.get('url', '')}" for r in data["results"][:5]]
-                return "\\n\\n".join(formatted)
+                formatted = [f"- {r.get('name', '')}\n  {r.get('snippet', '')}\n  URL: {r.get('url', '')}" for r in data["results"][:5]]
+                return "\n\n".join(formatted)
             elif "answer" in data:
                 return data["answer"]
             return str(data)

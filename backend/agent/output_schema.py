@@ -26,16 +26,20 @@ class AgentOutput(BaseModel):
     icp_score: int = Field(0, ge=0, le=100)
     icp_reasoning: str = ""
 
-    # Contact data — only populated after enrichment
-    email: str = ""
-    phone: str = ""
-
-    # Research output — populated after research
-    research_summary: str = ""
-    personalization_hooks: List[str] = Field(default_factory=list)
-    recommended_action: str = ""
-
-    # Metadata
-    tools_used: List[str] = Field(default_factory=list)
-    enrichment_triggered: bool = False
-    credits_used: int = 0
+    # ── Final Output ─────────────────────────────────────────
+    research_summary: str = Field(
+        default="",
+        description="2-3 sentence summary uniting the person and the company's current context."
+    )
+    personalization_hooks: List[str] = Field(
+        default_factory=list,
+        description="List of 2-3 specific angles or hooks for cold outreach."
+    )
+    recommended_action: str = Field(
+        default="",
+        description="Clear next step (e.g. 'Highly qualified — reach out immediately', 'Skip, too small')."
+    )
+    tools_used: List[str] = Field(
+        default_factory=list,
+        description="Names of the MCP tools actually called during this run."
+    )

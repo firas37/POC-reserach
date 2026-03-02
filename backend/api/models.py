@@ -27,14 +27,26 @@ class ResearchResponse(BaseModel):
     industry: Optional[str] = None
     icp_score: int = Field(..., ge=0, le=100)
     icp_reasoning: str
-    email: Optional[str] = None
-    phone: Optional[str] = None
     research_summary: Optional[str] = None
     personalization_hooks: List[str] = Field(default_factory=list)
     recommended_action: Optional[str] = None
     tools_used: List[str] = Field(default_factory=list)
-    enrichment_triggered: bool = False
-    credits_used: int = 0
+
+
+class EnrichRequest(BaseModel):
+    """Incoming prospect data strictly for enrichment."""
+    first_name: str
+    last_name: str
+    domain: str
+    linkedin_url: Optional[str] = None
+
+
+class EnrichResponse(BaseModel):
+    """Structured output returned after enrichment."""
+    email: Optional[str] = None
+    phone: Optional[str] = None
+    confidence_score: Optional[int] = None
+    message: Optional[str] = None
 
 
 class HealthResponse(BaseModel):
